@@ -103,6 +103,7 @@ a{color:inherit;text-decoration:none}
   margin-bottom:clamp(28px,4vw,52px);padding-top:22px;border-top:1px solid var(--line)}
 .sec-head h2{margin:0;font-size:clamp(25px,3.3vw,42px);letter-spacing:-.038em;line-height:1.06;font-weight:600;max-width:16em}
 .sec-head p{margin:0;max-width:380px;color:var(--ink-2);font-size:14.5px;line-height:1.6}
+.sec-head.top{align-items:flex-start}
 .eyebrow{font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px;font-weight:600}
 
 /* ---------- category grid: 2 x 2 editorial ---------- */
@@ -204,11 +205,54 @@ a{color:inherit;text-decoration:none}
 .spec th{width:32%;color:var(--ink-3);font-weight:500;font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding-top:17px}
 .spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
 
-/* ---------- technique list ---------- */
-.techs{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(28px,4vw,64px)}
-.tech{padding:24px 0;border-top:1px solid var(--line)}
-.tech h4{margin:0 0 7px;font-size:15.5px;font-weight:600;letter-spacing:-.01em}
-.tech p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+/* ---------- decisions (customization) ---------- */
+.decs{border-top:1px solid var(--line)}
+.dec{display:grid;grid-template-columns:52px minmax(0,1.1fr) minmax(0,1fr);
+  gap:0 clamp(22px,3.4vw,56px);padding:26px 0 24px;border-bottom:1px solid var(--line)}
+.dec .n{font-size:11px;letter-spacing:.2em;font-weight:600;color:var(--accent);padding-top:5px}
+.dec h3{margin:0 0 7px;font-size:clamp(16px,1.5vw,19.5px);font-weight:600;letter-spacing:-.022em}
+.dec .why{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.62;max-width:33em}
+.dec dl{margin:0}
+.dec dt{font-size:9.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-3);
+  font-weight:600;margin:0 0 5px}
+.dec dd{margin:0 0 15px;font-size:13.5px;color:var(--ink);line-height:1.55}
+.dec dd:last-child{margin-bottom:0}
+
+/* ---------- customization step plate ---------- */
+.steps-plate{background:var(--paper);border:1px solid var(--line);padding:clamp(10px,1.4vw,18px)}
+.steps-plate img{display:block;width:100%;height:auto}
+.steps-plate .pl-m{display:none}
+
+/* ---------- method list (no photos) ---------- */
+.mlist{border-top:1px solid var(--line);margin-top:4px}
+.mlist a{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 22px;align-items:baseline;
+  padding:17px 0 15px;border-bottom:1px solid var(--line);color:var(--ink)}
+.mlist h3{margin:0;font-size:16.5px;font-weight:600;letter-spacing:-.018em;transition:color .3s}
+.mlist a:hover h3{color:var(--accent)}
+.mlist em{font-style:normal;font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;white-space:nowrap}
+.mlist p{grid-column:1/-1;margin:0;font-size:13px;color:var(--ink-2);line-height:1.55;max-width:46em}
+
+/* ---------- method cards ---------- */
+.mcards{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,3.4vw,44px)}
+.mcard{display:block;border-top:1px solid var(--line);padding-top:16px;color:var(--ink)}
+.mcard figure{margin:0 0 15px;overflow:hidden;background:var(--sand)}
+.mcard img{display:block;width:100%;aspect-ratio:6/5;object-fit:cover;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.mcard:hover img{transform:scale(1.03)}
+.mcard h4{margin:0 0 7px;font-size:16.5px;font-weight:600;letter-spacing:-.018em;
+  display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.mcard:hover h4{color:var(--accent)}
+.mcard h4 em{font-style:normal;font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;white-space:nowrap}
+.mcard p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.64}
+
+/* ---------- why choose us ---------- */
+.whys{display:grid;grid-template-columns:repeat(2,1fr);gap:0 clamp(30px,4.5vw,72px);margin-top:4px}
+.why{padding:26px 0 24px;border-top:1px solid var(--line)}
+.why b{display:block;font-size:10.5px;letter-spacing:.2em;color:var(--accent);font-weight:600;margin-bottom:11px}
+.why h3{margin:0 0 8px;font-size:17.5px;font-weight:600;letter-spacing:-.02em;line-height:1.25}
+.why p{margin:0;font-size:13.5px;color:var(--ink-2);line-height:1.66}
 
 
 
@@ -354,7 +398,7 @@ a{color:inherit;text-decoration:none}
   .hero2{grid-template-columns:1fr}
   .hero2-txt{padding:34px clamp(18px,4vw,44px) 30px}
   .split.rev .frame{order:-1}
-  .contact-grid,.techs{grid-template-columns:1fr}
+  .contact-grid,.mcards{grid-template-columns:1fr}
   .ftr-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:760px){
@@ -384,8 +428,14 @@ a{color:inherit;text-decoration:none}
   .fact:nth-child(even){border-left:1px solid var(--line);padding-left:20px}
   .fact:nth-child(n+3){border-top:1px solid var(--line)}
   .fintro-in{grid-template-columns:1fr;gap:20px}
+  .whys{grid-template-columns:1fr;gap:0}
+  .dec{grid-template-columns:1fr;gap:12px;padding:22px 0}
+  .dec .n{padding-top:0}
   .crow{grid-template-columns:1fr;gap:20px}
   .crow.rev .crow-img{order:0}
+  .steps-plate{background:transparent;border:0;padding:0}
+  .steps-plate .pl-d{display:none}
+  .steps-plate .pl-m{display:grid;gap:12px}
   .reviews{grid-template-columns:1fr}
   .tcell span{font-size:9px}
   .wa-float span{display:none}
