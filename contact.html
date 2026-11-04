@@ -73,7 +73,7 @@
     <div class="info-row"><b>Hours</b><div>Mon–Sat, 9:00–18:00 (GMT+8)</div></div>
     <div class="info-row"><b>Address</b><div>No. 39, Beisaikou, Pengdun Village, Yuanhua Town, Jiaxing, Zhejiang, China</div></div>
       <div class="info-row"><b>Reply time</b><div>Within 24 hours, usually much sooner</div></div>
-    <img src="assets/img/v5/p-ankle-trio.jpg" alt="Ankle and quarter socks knitted in the Mingzhi workshop" style="width:100%;margin-top:26px;aspect-ratio:4/3;object-fit:cover" loading="lazy">
+    <img src="assets/img/v5/p-ankle-trio.webp" alt="Ankle and quarter socks knitted in the Mingzhi workshop" style="width:100%;margin-top:26px;aspect-ratio:4/3;object-fit:cover" loading="lazy">
   </div>
 </div></div></section>
 <script>
@@ -93,6 +93,7 @@ function sendQuote(e){
   return false;
 }
 function sendMail(){
+  if(window.gtag)gtag("event","email_click",{source:"form"});
   var sub = encodeURIComponent("Request for quote - custom socks");
   window.location.href = "mailto:" + MAIL + "?subject=" + sub + "&body=" + encodeURIComponent(buildMsg());
 }
