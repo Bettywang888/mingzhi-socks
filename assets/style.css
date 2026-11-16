@@ -512,7 +512,7 @@ a{color:inherit;text-decoration:none}
    The global reset is a{color:inherit;text-decoration:none}, which leaves
    links inside body copy invisible. These rules give prose links a visible
    affordance without touching navigation, buttons or cards.            */
-.post p a,.a-body a,.info-row a,.fq p a,.page-hd p a{
+.post p a,.a-body a,.art-body a,.info-row a,.fq p a,.page-hd p a{
   color:var(--accent);
   text-decoration:underline;
   text-decoration-thickness:1px;
@@ -521,14 +521,14 @@ a{color:inherit;text-decoration:none}
   -webkit-text-decoration-color:rgba(60,74,66,.4);
   transition:text-decoration-color .15s ease;
 }
-.post p a:hover,.a-body a:hover,.info-row a:hover,.fq p a:hover,.page-hd p a:hover,
-.post p a:focus-visible,.a-body a:focus-visible{
+.post p a:hover,.a-body a:hover,.art-body a:hover,.info-row a:hover,.fq p a:hover,.page-hd p a:hover,
+.post p a:focus-visible,.a-body a:focus-visible,.art-body a:focus-visible{
   text-decoration-color:var(--accent);
   text-decoration-thickness:1px;
 }
-.a-body a{text-underline-offset:2px}
+.a-body a,.art-body a{text-underline-offset:2px}
 @media (max-width:640px){
-  .post a,.a-body a,.info-row a{text-underline-offset:2px}
+  .post a,.a-body a,.art-body a,.info-row a{text-underline-offset:2px}
 }
 
 /* ---------- article pages ---------- */
