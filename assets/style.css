@@ -685,3 +685,19 @@ a{color:inherit;text-decoration:none}
 .proof figcaption{margin-top:10px;font-size:12.5px;line-height:1.55;color:var(--ink-3)}
 .proof b{color:var(--ink);font-weight:600}
 @media(max-width:620px){.proof{grid-template-columns:1fr;gap:18px}}
+/* 页脚栏目标题改为 <p class="ftr-h">，保留原 h5 视觉样式（2026-11-17 SEO） */
+.ftr p.ftr-h{margin:0 0 16px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+/* 流程步骤由 h4 提升为 h3（消除 H2→H4 跳级），样式沿用（2026-11-17 SEO） */
+.step h3{margin:0 0 8px;font-size:15px;font-weight:600;letter-spacing:-.01em}
+/* 首页四类产品卡标题由 h3 提升为 h2（消除 H1→H3 跳级），样式沿用 */
+.crow-txt h2{font-size:clamp(21px,2.5vw,31px);letter-spacing:-.032em;margin:0 0 12px;line-height:1.15}
+/* ============ 文章内参数表 / 对比图 / FAQ（2026-11-17 SEO 内容扩容） ============ */
+.art-extra{max-width:44em;margin:clamp(28px,3.4vw,44px) 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.art-extra h2{font-size:clamp(20px,2.3vw,27px);letter-spacing:-.03em;line-height:1.16;margin:0 0 10px;font-weight:600}
+.art-extra h2 + h2,.art-extra .faq h2{margin-top:26px}
+.art-extra .art-sub{font-size:15px;line-height:1.62;color:var(--ink-3);margin:0 0 16px}
+.art-extra .spec-wrap{max-width:100%}
+.art-chart{margin:18px 0 0;padding:18px 0 0;border-top:1px solid var(--line)}
+.art-chart svg{display:block;width:100%;max-width:640px;height:auto}
+.art-chart figcaption{margin-top:10px;font-size:13px;line-height:1.55;color:var(--ink-3)}
+.art-extra .faq{margin-top:4px}
